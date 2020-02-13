@@ -38,6 +38,9 @@ if __name__ == "__main__":
     w.errSignal.connect(print)
 
     w.run_command("test.bat", cwd="./", shell=True)
+    w.run_command("cd", cwd="./", shell=True)
+    w.run_command("whoami", cwd="./", shell=True)
+    w.run_command("dir", cwd="./", shell=True)
 
     QtCore.QTimer.singleShot(60 * 1000, QtCore.QCoreApplication.quit)
 
