@@ -31,13 +31,13 @@ if __name__ == "__main__":
     def printer(data):
         print(data)
 
-    w.outSignal.connect(lambda r: print(r, QtCore.QDate.currentTime()))
+    w.outSignal.connect(lambda r: print(r, QtCore.QTime.currentTime()))
 
     w.run_command("test.bat", cwd="./", shell=True)
     # w.run_command("cd", cwd="./", shell=True)
     # w.run_command("whoami", cwd="./", shell=True)
     # w.run_command("dir", cwd="./", shell=True)
-    # w.run_command(["ping", "8.8.8.8"])
+    w.run_command(["ping", "8.8.8.8"])
 
     QtCore.QTimer.singleShot(60 * 1000, QtCore.QCoreApplication.quit)
 
